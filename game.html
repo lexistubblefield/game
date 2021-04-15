@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper or Scissors game</title>
+</head>
+<body>
+    <script>
+        console.log("hello")
+        function computerPlay () {
+            let randNum= Math.ceil(Math.random()*3)
+            console.log(randNum);
+            if (randNum== 1) {
+                return "rock";
+            }
+            else if (randNum== 2) {
+                return "paper";
+            }
+            else {
+                return "scissors";
+            }
+        } 
+        function playerPlay () {
+            return prompt( "rock, paper or scissors ? ")
+           
+            } 
+       function singleRound (playerSelection, computerChoice) {
+           if (playerSelection == `rock` && computerChoice == `rock`)
+           {
+           return `Draw ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == `rock` && computerChoice == 'paper')
+           {
+           return `Computer Wins ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'rock' && computerChoice == 'scissors')
+           { 
+           return `Player Wins ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'paper' && computerChoice == 'paper')
+           {
+           return `Draw ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'paper' && computerChoice == 'scissors')
+           {
+           return `Computer Wins ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'paper' && computerChoice == 'rock')
+           {
+           return `Player Wins ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'scissors' && computerChoice == 'scissors')
+           { 
+           return `Draw ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'scissors' && computerChoice == 'rock')
+           {
+           return `Computer Wins ${playerSelection} vs ${computerChoice}`;}
+           if (playerSelection == 'scissors' && computerChoice == 'paper')
+           {
+           return `Player Wins ${playerSelection} vs ${computerChoice}`;}
+       }
+       let playerSelection = playerPlay();
+       let computerChoice= computerPlay();
+       console.log(singleRound(playerSelection,computerChoice));
+    </script>
+</body>
+</html>
