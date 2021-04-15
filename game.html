@@ -26,6 +26,7 @@
             return prompt( "rock, paper or scissors ? ");
 
             } 
+            
        function singleRound (playerSelection, computerChoice) {
            if (playerSelection == `rock` && computerChoice == `rock`)
            {
@@ -55,12 +56,13 @@
            {
            return `Player Wins ${playerSelection} vs ${computerChoice}`;}
            else { 
-               return `Not an option choice again`; 
+               return `Not an option choice again` ; 
            }
        }
+    
        let playerSelection = playerPlay();
        let computerChoice = computerPlay();
        console.log(singleRound(playerSelection,computerChoice));
-    </script>
+    </script> 
 </body>
 </html>
