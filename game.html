@@ -54,9 +54,12 @@
            if (playerSelection == 'scissors' && computerChoice == 'paper')
            {
            return `Player Wins ${playerSelection} vs ${computerChoice}`;}
+           else { 
+               return `Not an option choice again`; 
+           }
        }
        let playerSelection = playerPlay();
-       let computerChoice= computerPlay();
+       let computerChoice = computerPlay();
        console.log(singleRound(playerSelection,computerChoice));
     </script>
 </body>
